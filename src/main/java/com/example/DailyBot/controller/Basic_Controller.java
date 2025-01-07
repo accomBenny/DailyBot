@@ -24,10 +24,8 @@ public class Basic_Controller {
     //文字搜尋餐廳
     @GetMapping("/dinerRates")
     public Object dinerRates(
-        @RequestParam String textQuery,
-        @RequestParam float latitude,
-        @RequestParam float longitude) {
-        Object response = placesAPI.searchDinerByText(textQuery, latitude, longitude);
+        @RequestParam String textQuery) {
+        Object response = placesAPI.searchDinerByText(textQuery);
 
         return response;
     }
