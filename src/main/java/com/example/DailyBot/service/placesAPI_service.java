@@ -21,6 +21,7 @@ public class placesAPI_service {
         Map<String, Object> requestMap = new HashMap<>();
 
         requestMap.put("textQuery", textQuery);
+        requestMap.put("pageSize", 5);
 
         Gson gson = new Gson();
         String requestBody = gson.toJson(requestMap);
