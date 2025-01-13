@@ -1,7 +1,6 @@
 package com.example.DailyBot.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.DailyBot.service.placesAPI_service;
@@ -22,7 +21,7 @@ public class Basic_Controller {
         this.telegramAPI = telegramAPI;
     }
 
-    @PostMapping("/healthcheck")
+    @GetMapping("/healthcheck")
     public String healthcheck() {
         return new String("ok");
     }
